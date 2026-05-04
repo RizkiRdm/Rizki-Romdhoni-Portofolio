@@ -2,6 +2,12 @@
 
 A high-performance, minimalist portfolio designed for a Backend Engineer. Built with a focus on **Semantic HTML**, **Clean Code**, and **System Logic Storytelling**.
 
+---
+
+![desktop image](/assets/Desktop.png)
+
+---
+
 ## **Project Goals**
 
 - Menampilkan keahlian Backend (Go, Python, AI) melalui pendekatan "Logic First".

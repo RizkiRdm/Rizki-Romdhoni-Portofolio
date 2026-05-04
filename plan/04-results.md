@@ -4,7 +4,7 @@
 
 - **Nama:** Rizki R.
 - **Repository:** https://github.com/RizkiRdm/Rizki-Romdhoni-Portofolio
-- **Live URL:** \[GitHub Pages URL\]
+- **Live URL:** https://rizkirdm.github.io/Rizki-Romdhoni-Portofolio/main.html
 - **Date:** 20 Mei 2024
 
 ## **Screenshot: Desktop**
