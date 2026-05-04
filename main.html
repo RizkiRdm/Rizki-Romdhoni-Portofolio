@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizki R | Backend Engineer & AI Specialist</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigasi Utama -->
+    <nav class="main-nav" role="navigation">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">RR_</a>
+            <ul class="nav-links">
+                <li><a href="#status">Status</a></li>
+                <li><a href="#projects-horizontal">Karya</a></li>
+                <li><a href="#tech-stack">Stack</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="top">
+        <div class="container">
+            <h1 class="hero-title">Membangun sistem tangguh dengan <span style="color: var(--accent);">logika</span>.
+            </h1>
+            <p class="hero-subtitle">Saya Rizki R. Backend Engineer yang fokus pada optimasi performa dan sistem
+                terdistribusi.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Status Section -->
+        <section id="status" class="container" style="margin-bottom: 8rem; scroll-margin-top: 100px;">
+            <h2 class="section-label">Status</h2>
+            <div class="api-card">
+                <pre><code>{ "status": "Ready", "focus": "AI & Scale" }</code></pre>
+            </div>
+        </section>
+
+        <!-- HORIZONTAL SCROLL SECTION -->
+        <section id="projects-horizontal" class="horizontal-section">
+            <div class="sticky-wrapper">
+                <div class="horizontal-content">
+
+                    <!-- Label Section yang ikut bergeser -->
+                    <div style="flex-shrink: 0; width: 300px;">
+                        <h2 class="section-label">Karya Terpilih</h2>
+                        <p style="color: var(--text-secondary);">Beberapa Proyek yang berhasil saya bangun.</p>
+                    </div>
+
+                    <!-- Project 1 -->
+                    <article class="project">
+                        <time>JAN 2024</time>
+                        <h3>Quantum-Resistant Auth</h3>
+                        <p>Layanan autentikasi mikro menggunakan kriptografi pasca-kuantum.</p>
+                        <div style="margin-top: 2rem;">
+                            <span class="tag">Go</span> <span class="tag">gRPC</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project">
+                        <time>NOV 2023</time>
+                        <h3>AI Sentiment Pipeline</h3>
+                        <p>Pipeline analisis data pasar kripto real-time dengan LLM.</p>
+                        <div style="margin-top: 2rem;">
+                            <span class="tag">Python</span> <span class="tag">GPT-4</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project">
+                        <time>SEP 2023</time>
+                        <h3>Distributed Task Queue</h3>
+                        <p>Sistem antrean tugas terdistribusi dengan fault-tolerance tinggi.</p>
+                        <div style="margin-top: 2rem;">
+                            <span class="tag">Rust</span> <span class="tag">Redis</span>
+                        </div>
+                    </article>
+
+                    <!-- Spacer di akhir agar tidak terpotong -->
+                    <div style="flex-shrink: 0; width: 10vw;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Vertical Section -->
+        <section id="tech-stack" class="container" style="margin-top: 8rem; scroll-margin-top: 100px;">
+            <h2 class="section-label">Technical Stack</h2>
+            <p>Go, Python, Docker, Kubernetes, dan sistem AI terapan.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Rizki R. Dibuat dengan Semantic HTML & Presisi.</p>
+            <div style="margin-top: 1rem;">
+                <a href="https://github.com/RizkiRdm" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 0.5rem;">GitHub</a>
+                <a href="http://linkedin.com/in/rizki-romdhoni" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 0.5rem;">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const horizontalSection = document.querySelector('.horizontal-section');
+        const content = document.querySelector('.horizontal-content');
+
+        window.addEventListener('scroll', () => {
+            const sectionOffsetTop = horizontalSection.offsetTop;
+            const sectionHeight = horizontalSection.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY;
+
+            if (scrollY >= sectionOffsetTop && scrollY <= (sectionOffsetTop + sectionHeight - windowHeight)) {
+                const scrolledInSection = (scrollY - sectionOffsetTop) / (sectionHeight - windowHeight);
+                const scrollableWidth = content.scrollWidth - window.innerWidth;
+                const translateX = scrolledInSection * scrollableWidth;
+                content.style.transform = `translateX(-${translateX}px)`;
+            }
+            else if (scrollY < sectionOffsetTop) {
+                content.style.transform = `translateX(0px)`;
+            }
+        });
+    </script>
+</body>
+
+</html>
